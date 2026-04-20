@@ -1,0 +1,82 @@
+Running Python 3.12.11 | packaged by Anaconda, Inc. | (main, Jun  5 2025, 13:09:17) [GCC 11.2.0]
+Running PyTorch 2.8.0+cu128
+Sun Apr 19 17:22:51 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.126.20             Driver Version: 580.126.20     CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA RTX PRO 6000 Blac...    Off |   00000000:05:00.0 Off |                    0 |
+| N/A   28C    P0             50W /  600W |     559MiB /  97887MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|    0   N/A  N/A           62395      C   ...a3/envs/cloudspace/bin/python        550MiB |
++-----------------------------------------------------------------------------------------+
+
+====================================================================================================
+val_bpb:enabled tokenizer_kind=sentencepiece tokenizer_path=./data/tokenizers/fineweb_1024_bpe.model
+train_loader:dataset:fineweb10B_sp1024 train_shards:10
+val_loader:shards pattern=./data/datasets/fineweb10B_sp1024/fineweb_val_*.bin tokens:62021632
+model_params:17875900
+world_size:1 grad_accum_steps:8
+sdp_backends:cudnn=False flash=True mem_efficient=False math=False
+attention_mode:gqa num_heads:10 num_kv_heads:5
+tie_embeddings:True embed_lr:0.05 head_lr:0.0 matrix_lr:0.04 scalar_lr:0.04
+train_batch_tokens:524288 train_seq_len:1024 iterations:20000 warmup_steps:20 max_wallclock_seconds:600.000
+seed:1337
+warmup_step:1/20
+warmup_step:2/20
+warmup_step:3/20
+warmup_step:4/20
+warmup_step:5/20
+warmup_step:6/20
+warmup_step:7/20
+warmup_step:8/20
+warmup_step:9/20
+warmup_step:10/20
+warmup_step:11/20
+warmup_step:12/20
+warmup_step:13/20
+warmup_step:14/20
+warmup_step:15/20
+warmup_step:16/20
+warmup_step:17/20
+warmup_step:18/20
+warmup_step:19/20
+warmup_step:20/20
+step:0/20000 val_loss:6.9454 val_bpb:4.1135 train_time:0ms step_avg:0.01ms
+step:1/20000 train_loss:6.9454 train_time:447ms step_avg:447.32ms
+step:2/20000 train_loss:19.8904 train_time:903ms step_avg:451.29ms
+step:3/20000 train_loss:9.9321 train_time:1355ms step_avg:451.72ms
+step:4/20000 train_loss:6.4551 train_time:1809ms step_avg:452.32ms
+step:5/20000 train_loss:6.0853 train_time:2263ms step_avg:452.67ms
+step:6/20000 train_loss:6.2745 train_time:2717ms step_avg:452.87ms
+step:7/20000 train_loss:6.1711 train_time:3171ms step_avg:453.02ms
+step:8/20000 train_loss:6.1516 train_time:3625ms step_avg:453.17ms
+step:9/20000 train_loss:6.0922 train_time:4079ms step_avg:453.27ms
+step:10/20000 train_loss:6.0112 train_time:4534ms step_avg:453.36ms
+step:200/20000 train_loss:2.7920 train_time:90727ms step_avg:453.63ms
+step:400/20000 train_loss:2.3845 train_time:181481ms step_avg:453.70ms
+step:600/20000 train_loss:2.4811 train_time:272224ms step_avg:453.71ms
+step:800/20000 train_loss:2.3278 train_time:362967ms step_avg:453.71ms
+step:1000/20000 train_loss:2.3418 train_time:453713ms step_avg:453.71ms
+step:1000/20000 val_loss:2.3101 val_bpb:1.3682 train_time:453719ms step_avg:453.72ms
+step:1200/20000 train_loss:2.2629 train_time:544460ms step_avg:453.72ms
+step:1323/20000 val_loss:2.2599 val_bpb:1.3385 train_time:600274ms step_avg:453.72ms
+stopping_early: wallclock_cap train_time:600274ms step:1323/20000
+peak memory allocated: 9076 MiB reserved: 9470 MiB
+Serialized model: 70215929 bytes
+Code size: 47686 bytes
+Total submission size: 70263615 bytes
+Serialized model int8+zlib: 13761255 bytes (payload:17976048 raw_torch:18006266 payload_ratio:3.90x)
+Total submission size int8+zlib: 13808941 bytes
+final_int8_zlib_roundtrip val_loss:2.2627 val_bpb:1.3401 eval_time:15730ms
+final_int8_zlib_roundtrip_exact val_loss:2.26269170 val_bpb:1.34009347
